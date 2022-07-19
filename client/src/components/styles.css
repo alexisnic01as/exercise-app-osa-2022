@@ -1,0 +1,5 @@
+.workout-card {
+    width: 50vh;
+    outline: auto;
+    display: flex;
+}
