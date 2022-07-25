@@ -1,6 +1,5 @@
 import React from "react";
-import { Button, Card, CardContent, Typography, CardActions } from '@mui/material';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import { Button, Card, Typography } from '@mui/material';
 import "./styles.css"
 
 export default function WorkoutCard(props) {

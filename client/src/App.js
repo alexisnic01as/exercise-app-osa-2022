@@ -9,6 +9,7 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import WorkoutPage from "./pages/workoutPage";
+import BrowsePage from "./pages/browsePage";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
         <Route path="/my-workouts" element={<WorkoutPage/>} />
+        <Route path="/browse" element={<BrowsePage/>}/>
       </Routes>
       </div>
     </div>
