@@ -15,9 +15,10 @@ export default function WorkoutCard(props) {
         </div>
         <div className="workout-button-area">
             <Tooltip title="Delete">
-                <IconButton aira-label="delete"><ClearIcon
-                    className="clear-icon"
-                    onClick={() => alert('delete')}/></IconButton>
+                <IconButton 
+                aira-label="delete"
+                onClick={() => alert('delete')}><ClearIcon
+                    className="clear-icon"/></IconButton>
             </Tooltip>
         </div>
     </Card>

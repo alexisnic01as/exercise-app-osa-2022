@@ -22,9 +22,23 @@ export default function NewWorkout() {
         setDialogOpen(false);
     }
 
-    const handleFormSubmit = () => {
+    async function handleFormSubmit() {
         console.log(workoutName)
         console.log(workoutAmount)
+
+        const data = {name: workoutName, amount: workoutAmount};
+
+        await fetch("http://localhost:5000/workout", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+            })
+            .catch(error => {
+            window.alert(error);
+            return;
+        });
     }
 
 

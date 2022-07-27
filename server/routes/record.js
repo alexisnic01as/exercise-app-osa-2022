@@ -81,4 +81,34 @@ recordRoutes.route("/:id").delete((req, response) => {
   });
 });
 
+// This section will help you create a new record into workout.
+recordRoutes.route("/workout").post(function (req, response) {
+  let db_connect = dbo.getDb();
+
+  console.log(req)
+
+  let workout = {
+    workoutName: req.body.name,
+    workoutAmount: req.body.amount
+  };
+  db_connect.collection("records").insertOne(workout, function (err, res) {
+    if (err) throw err;
+    response.json(res);
+  });
+});
+
+// This section will help you get a single record by id
+recordRoutes.route("/workout").get(function (req, res) {
+  let db_connect = dbo.getDb();
+  // let myquery = { _id: ObjectId( req.params.id )};
+  let myquery = {};
+  db_connect
+      .collection("records")
+      .find({})
+      .toArray(function (err, result) {
+        if (err) throw err;
+        res.json(result);
+      });
+});
+
 module.exports = recordRoutes;
