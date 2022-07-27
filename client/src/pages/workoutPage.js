@@ -2,6 +2,8 @@ import React from "react";
 import WorkoutCard from "../components/workoutCard.js";
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import "../components/styles.css"
+import NewWorkout from "../components/newWorkout.js";
+
 
 const workouts = [
     {icon: <DirectionsRunIcon/>, title: "Running in Place", info: "10 minutes"},
@@ -14,7 +16,12 @@ export default function WorkoutPage() {
         Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises.
         {workouts.map(o => 
             <WorkoutCard icon = {o.icon} title = {o.title} info = {o.info}/>
-            )}
+        )}
+
+        { // insert a new component to be able to create a new workout into the database
+        }
+        <NewWorkout/>
+
     </div>
 
 }
