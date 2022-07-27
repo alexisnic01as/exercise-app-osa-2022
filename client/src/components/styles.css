@@ -23,3 +23,44 @@
     /* align-self: flex-start; */
     padding-left: 80%;
 }
+
+.nav {
+    width: 100vw;
+    flex-direction: row;
+    border-bottom: 1px solid;
+    border-color: black;
+    /* background-color: blue; */
+}
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+}
+
+.page {
+    padding-left: 1vw;
+}
+
+.current-tab {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: .5em;
+}
+
+a {
+    color: black;
+}
+
+.clear-icon {
+    color: rgb(194, 42, 42);
+}
+
+.card-area {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}

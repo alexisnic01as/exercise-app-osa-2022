@@ -9,17 +9,19 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import WorkoutPage from "./pages/workoutPage";
+import Browse from "./pages/browse";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <div style={{ margin: 20 }}>
+      <div style={{ marginTop: 20 }}>
       <Routes>
         <Route exact path="/" element={<RecordList />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/my-workouts" element={<WorkoutPage/>} />
+        <Route path="/my-workouts" element={<WorkoutPage />} />
+        <Route path="/browse" element={<Browse />} />
       </Routes>
       </div>
     </div>

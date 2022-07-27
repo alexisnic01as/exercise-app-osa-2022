@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, Card, CardContent, Typography, CardActions } from '@mui/material';
+import { Button, Card, CardContent, Typography, CardActions, IconButton, Tooltip } from '@mui/material';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ClearIcon from '@mui/icons-material/Clear';
 import "./styles.css"
 
 export default function WorkoutCard(props) {
@@ -12,7 +14,11 @@ export default function WorkoutCard(props) {
             <Typography variant = "body1"> {props.info}</Typography>
         </div>
         <div className="workout-button-area">
-            <Button> Remove from my workouts </Button>
+            <Tooltip title="Delete">
+                <IconButton aira-label="delete"><ClearIcon
+                    className="clear-icon"
+                    onClick={() => alert('delete')}/></IconButton>
+            </Tooltip>
         </div>
     </Card>
     )
