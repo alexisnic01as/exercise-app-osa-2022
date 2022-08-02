@@ -14,7 +14,7 @@ import Browse from "./pages/browse";
 const App = () => {
   return (
     <div>
-      <Navbar />
+
       <div style={{ marginTop: 20 }}>
       <Routes>
         <Route exact path="/" element={<RecordList />} />

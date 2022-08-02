@@ -7,7 +7,6 @@ import WorkoutCard from "../components/workoutCard";
 
 // make database call to retrieve all workouts; it should happen on page load
 
-
 export default function Browse() {
 
     const [workouts, setWorkouts] = useState([]);
@@ -48,7 +47,7 @@ export default function Browse() {
                 {workouts.filter(workout => workout.workoutName && workout.workoutAmount)
                     .map(o => 
                     <WorkoutCard
-                    icon = {<DirectionsRunIcon/>}
+                    icon = {<DirectionsRunIcon sx = {{fontSize: '10vw'}}/>}
                     title = {o.workoutName}
                     info = {o.workoutAmount}
                     />
