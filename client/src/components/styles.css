@@ -13,21 +13,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
-    padding: 2vh;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    padding-top: 3%;
+    margin: 5%;
     border-style: solid;
-    border: black;
+    border: red;
     border-width: 2px;
 }
 
 .workout-button-area {
     /* align-self: flex-start; */
     padding-left: 80%;
+    font-size: 1vw;
+}
+
+.workout-title {
+    font-size: 3vw;
+    margin-bottom: 0vh;
+}
+
+.workout-info {
+    font-size: 2vw;
+}
+
+.workout-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .nav {
@@ -74,4 +88,9 @@ a {
 
 .grey-background {
     background-color: gray;
+}
+
+.workout-icon {
+    transform: scale(2em);
+    color: orange;
 }

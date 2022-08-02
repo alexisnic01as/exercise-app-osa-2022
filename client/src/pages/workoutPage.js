@@ -2,11 +2,7 @@ import React from "react";
 import WorkoutCard from "../components/workoutCard.js";
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import "../components/styles.css"
-import NewWorkout from "../components/newWorkout.js";
 
-import RecordList from "../components/recordList.js";
-
-import { Button } from '@mui/material'
 import { NavLink } from "react-router-dom";
 
 const workouts = [
