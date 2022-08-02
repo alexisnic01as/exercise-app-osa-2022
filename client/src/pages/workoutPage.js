@@ -13,6 +13,11 @@ const workouts = [
     {icon: <DirectionsRunIcon/>, title: "Running in Place", info: "10 minutes"},
     {icon: <DirectionsRunIcon/>, title: "Jumping Jacks", info: "5 minutes"},
     {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
+    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
+    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
+    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
+    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
+    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
 ]
 
 export default function WorkoutPage() {
@@ -28,8 +33,8 @@ export default function WorkoutPage() {
                     </li>
                 </ul>
             </nav>
+            Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises.
             <div className="card-area">
-                Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises.
                 {workouts.map(o => 
                     <WorkoutCard
                     icon = {o.icon}

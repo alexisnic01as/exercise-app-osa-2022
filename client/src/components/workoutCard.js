@@ -8,7 +8,9 @@ import "./styles.css"
 export default function WorkoutCard(props) {
     return (
     <Card className="workout-card">
-        {props.icon}
+        <div className="icon" style={{transform: 'scale(1, 1)',}}>
+            {props.icon}
+        </div>
         <div>
             <Typography variant = "h4"> {props.title} </Typography>
             <Typography variant = "body1"> {props.info}</Typography>
