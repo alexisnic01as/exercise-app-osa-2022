@@ -5,16 +5,10 @@ import "../components/styles.css"
 
 import { NavLink } from "react-router-dom";
 
-const workouts = [
-    {icon: <DirectionsRunIcon/>, title: "Running in Place", info: "10 minutes"},
-    {icon: <DirectionsRunIcon/>, title: "Jumping Jacks", info: "5 minutes"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-    {icon: <DirectionsRunIcon/>, title: "Pushups", info: "25x"},
-]
+const unparsedWorkouts = localStorage.getItem("my-workouts")
+
+const workouts = unparsedWorkouts ? JSON.parse(unparsedWorkouts) : []
+
 
 export default function WorkoutPage() {
     return (
@@ -29,13 +23,16 @@ export default function WorkoutPage() {
                     </li>
                 </ul>
             </nav>
-            Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises.
+            <div className = "text-area">
+                <p>Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises. </p>
+            </div>
             <div className="card-area">
                 {workouts.map(o => 
                     <WorkoutCard
-                    icon = {o.icon}
-                    title = {o.title}
-                    info = {o.info}
+                    icon = {<DirectionsRunIcon sx = {{fontSize: '10vw'}}/>}
+                    title = {o.workoutTitle}
+                    info = {o.workoutInfo}
+                    id = {o.workoutId}
                     />
                 )}
             </div>

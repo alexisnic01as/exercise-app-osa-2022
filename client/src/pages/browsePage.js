@@ -50,10 +50,13 @@ export default function Browse() {
                     icon = {<DirectionsRunIcon sx = {{fontSize: '10vw'}}/>}
                     title = {o.workoutName}
                     info = {o.workoutAmount}
+                    id = {o._id}
                     />
-                )}
+                )}            
             </div>
-            <NewWorkout/>
+            <div className = "button-area">
+                <NewWorkout/>
+            </div>
         </div>
     )
 }
