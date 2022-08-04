@@ -5,21 +5,17 @@ import { Route, Routes } from "react-router-dom";
 
 // We import all the components we need in our app
 import Navbar from "./components/navbar";
-import RecordList from "./components/recordList";
-import Edit from "./components/edit";
-import Create from "./components/create";
+
 import WorkoutPage from "./pages/workoutPage";
-import Browse from "./pages/browse";
+import Browse from "./pages/browsePage";
 
 const App = () => {
   return (
     <div>
 
-      <div style={{ marginTop: 20 }}>
+      <div >
       <Routes>
-        <Route exact path="/" element={<RecordList />} />
-        <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/create" element={<Create />} />
+        <Route exact path="/" element={<Browse />} />
         <Route path="/my-workouts" element={<WorkoutPage />} />
         <Route path="/browse" element={<Browse />} />
       </Routes>
