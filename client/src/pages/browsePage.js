@@ -5,6 +5,8 @@ import { useEffect, useState } from "react"
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import WorkoutCard from "../components/workoutCard";
 
+import Scroll from "../components/scroll";
+
 // make database call to retrieve all workouts; it should happen on page load
 
 export default function Browse() {
@@ -57,6 +59,7 @@ export default function Browse() {
             <div className = "button-area">
                 <NewWorkout/>
             </div>
+            <Scroll showBelow={250} />
         </div>
     )
 }

@@ -5,6 +5,8 @@ import "../components/styles.css"
 
 import { NavLink } from "react-router-dom";
 
+import Scroll from "../components/scroll.js";
+
 const unparsedWorkouts = localStorage.getItem("my-workouts")
 
 const workouts = unparsedWorkouts ? JSON.parse(unparsedWorkouts) : []
@@ -24,7 +26,7 @@ export default function WorkoutPage() {
                 </ul>
             </nav>
             <div className = "text-area">
-                <p>Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises. </p>
+                {/* <p>Remove exercises from 'My Workouts' at any time, and return to the main page to browse new exercises. </p> */}
             </div>
             <div className="card-area">
                 {workouts.map(o => 
@@ -36,6 +38,7 @@ export default function WorkoutPage() {
                     />
                 )}
             </div>
+            <Scroll showBelow={250} />
         </div>
     )
 
