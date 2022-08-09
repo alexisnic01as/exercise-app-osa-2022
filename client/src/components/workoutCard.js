@@ -12,6 +12,7 @@ export default function WorkoutCard(props) {
         const workoutCard = {"workoutId": props.id, "workoutTitle": props.title, "workoutInfo": props.info};
 
         const storage = JSON.parse(localStorage.getItem("my-workouts"))
+        // console.log(storage)
 
         if (storage == null) {
             localStorage.setItem("my-workouts", JSON.stringify([workoutCard]))
@@ -36,6 +37,7 @@ export default function WorkoutCard(props) {
             <p className = "workout-info"> {props.info}</p>
         </div>
         <div className = "workout-button-area">
+            {console.log(JSON.parse(localStorage.getItem("my-workouts")))}
             {workoutState ? 
             <p className="already-in-myworkouts">Inside My Workouts</p> :
 
